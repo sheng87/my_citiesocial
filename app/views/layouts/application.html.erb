@@ -4,12 +4,20 @@
     <title>MyCitiesocial</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <%-# 可使用Ｔurbolinks,但不會觸發多次Javascript的問提 -%>
+    <meta name= "turbolinks-cache-control" content= "no-cache">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+    <body>
+    
+    <%= render 'shared/frontend/navbar' %>
+    <%= render 'shared/frontend/menu' %>
     <%= yield %>
-  </body>
+    <%= render 'shared/frontend/footer' %>
+    </body>
+   
+  
 </html>
