@@ -12,7 +12,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
     <body>
-    
+    <%= render 'shared/flash' if notice %>
     <%= render 'shared/frontend/navbar' %>
     <%= render 'shared/frontend/menu' %>
     <%= yield %>
