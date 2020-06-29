@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyCitiesocial 後台管理系統</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%-# 可使用Ｔurbolinks,但不會觸發多次Javascript的問提 -%>
+    <meta name= "turbolinks-cache-control" content= "no-cache">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'backend', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+      <%= render 'shared/flash' if notice %>
+      <%= render 'shared/backend/navbar' %>
+      <section class= "container">
+        <%= yield %>
+      </section>
+  </body>
+   
+  
+</html>
