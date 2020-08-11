@@ -53,6 +53,8 @@ class Admin::ProductsController < Admin::BaseController
                                          :list_price,
                                          :sell_price,
                                          :on_sale,
+                                         :cover_image,
+                                         :category_id,
                                          :description,
                                          skus_attributes: [
                                           :id, :spec,

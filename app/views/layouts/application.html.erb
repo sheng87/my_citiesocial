@@ -14,7 +14,7 @@
     <body>
     <%= render 'shared/flash' if notice %>
     <%= render 'shared/frontend/navbar' %>
-    <%= render 'shared/frontend/menu' %>
+    <%= render 'shared/frontend/menu', categories: @categories %>
     <%= yield %>
     <%= render 'shared/frontend/footer' %>
     </body>
