@@ -25,7 +25,6 @@ RSpec.describe Cart, type: :model do
     end
 
     it "可以計算整台購物車的總消費金額" do
-      cart = Cart.new
       p1 = create(:product, sell_price: 8)
       p2 = create(:product, sell_price: 7)
 
@@ -34,6 +33,29 @@ RSpec.describe Cart, type: :model do
 
       expect(cart.total_price).to eq 38
   end
+
+    describe "if the date is Dec 25th" do
+      before do
+        Timecop.freeze(Time.local(2019, 12, 25))
+      end
+    
+      after do
+        Timecop.return
+      end
+    
+      it "特別活動可搭配折扣（例如聖誕節的時候全面打 5 折)" do 
+        p1 = create(:product, sell_price: 8)
+        p2 = create(:product, sell_price: 7)
+  
+        3.times { cart.add_item(p1.id) }
+        2.times { cart.add_item(p2.id) }
+        
+        expect(Timecop.freeze(Time.local(2019, 12, 25))).to eq Time.now
+        expect(cart.merry_christmas).to eq 19
+    end
+      
+    end
+    
 end  
 
   context "進階功能" do 

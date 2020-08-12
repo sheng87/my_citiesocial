@@ -9,6 +9,11 @@ Rails.application.configure do
   config.cache_classes = false
   config.action_view.cache_template_loading = true
 
+  config.after_initialize do
+    # Set Time.now to September 1, 2008 10:05:00 AM (at this instant), but allow it to move forward
+    t = Time.local(2008, 12, 25, 10, 5, 0)
+    Timecop.travel(t)
+  end
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.

@@ -38,8 +38,11 @@ class Cart
     end  
 
     def total_price
-       @items.reduce(0) { |sum, item| sum = sum + item.total_price}
+      @items.reduce(0) { |sum, item| sum = sum + item.total_price}
     end
-    
-    
+
+    def merry_christmas
+        m = @items.reduce(0) { |sum, item| sum = sum + item.total_price}
+        m * 0.5
+    end
 end    
