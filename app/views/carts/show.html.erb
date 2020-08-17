@@ -1,0 +1,9 @@
+<section class="section">
+    <h1 class="title">購物車
+        <%= link_to cart_path,method: :delete, class: 'is-size-5', data: {confirm: '確定清空購物車？'} do %>
+        <i class="fas fa-trash"></i>
+        <span>清空購物車</span>
+        <% end %>
+    </h1>
+    <%= render 'cart' %>
+</section>

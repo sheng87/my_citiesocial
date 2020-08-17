@@ -5,6 +5,15 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show] 
+
+  resource :cart, only: [:show, :destroy] do
+    collection do 
+      get :checkout
+    end
+  end  
+
+  resources :orders, except: [:new, :edit, :destroy, :update]
+
     namespace :admin do
       root 'products#index'
       resources :products, except: [:show]
@@ -18,6 +27,7 @@ Rails.application.routes.draw do
     namespace :api do 
       namespace :v1 do 
         post 'subscribe', to: 'utils#subscribe'
+        post 'cart', to: 'utils#cart'
       end
     end
 end
