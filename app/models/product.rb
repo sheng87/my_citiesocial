@@ -10,6 +10,6 @@ class Product < ApplicationRecord
   #relationships                                 
   belongs_to :category, optional: true
   belongs_to :vendor
-  has_many :skus
+  has_many :skus, dependent: :destroy
   accepts_nested_attributes_for :skus, reject_if: :all_blank, allow_destroy: true
 end

@@ -1,4 +1,3 @@
-require 'faker'
 FactoryBot.define do
   factory :product do
     name { Faker::Name.name }
@@ -9,7 +8,7 @@ FactoryBot.define do
     category
 
     trait :with_skus do
-      tansient do 
+      transient do 
         amount { 2 }
       end
       

@@ -11,8 +11,8 @@ class CartItem
     end
 
     def product
-        # Product.friendly.find (sku_id)
-        Product.joins(:skus).find_by(skus: { id: sku_id})
+        Product.left_outer_joins(:skus).find_by(skus: { id: sku_id})
+        # Sku.find(sku_id).product
     end
 
     def total_price 

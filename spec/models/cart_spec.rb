@@ -28,7 +28,7 @@ RSpec.describe Cart, type: :model do
       p1 = create(:product, :with_skus, sell_price: 8)
       p2 = create(:product, :with_skus, sell_price: 7)
 
-      3.times { cart.add_sku(p1.skus.firstid) }
+      3.times { cart.add_sku(p1.skus.first.id) }
       2.times { cart.add_sku(p2.skus.first.id) }
 
       expect(cart.total_price).to eq 38

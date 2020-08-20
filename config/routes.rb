@@ -12,8 +12,19 @@ Rails.application.routes.draw do
     end
   end  
 
-  resources :orders, except: [:new, :edit, :destroy, :update]
+  resources :orders, except: [:new, :edit, :update, :destroy] do
+    member do
+      delete :cancel   # /orders/8/cancel
+      post :pay        # /orders/8/pay
+      get :pay_confirm # /orders/8/pay_confirm
+    end
 
+    collection do
+      get :confirm     # /orders/confirm
+    end
+  end
+
+    
     namespace :admin do
       root 'products#index'
       resources :products, except: [:show]
@@ -31,3 +42,4 @@ Rails.application.routes.draw do
       end
     end
 end
+
