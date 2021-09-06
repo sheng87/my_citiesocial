@@ -7,8 +7,6 @@ class CreateCategories < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-
-    add_index ：categories, :deleted_at
-
+    add_index :categories, :deleted_at
   end
 end
