@@ -1,8 +1,12 @@
-{   
-  "languages": [{
-    "id": "ruby",
-    "extentions": [".erb"]
-  }],
+{
+  "languages": [
+    {
+      "id": "ruby",
+      "extentions": [
+        ".erb"
+      ]
+    }
+  ],
   "name": "my_citiesocial",
   "private": true,
   "dependencies": {
