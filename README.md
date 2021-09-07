@@ -1,26 +1,15 @@
 # README
+Frontnd
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bulma Css
+Stimulus
 
-Things you may want to cover:
 
-* Ruby version
+Backend
 
-* System dependencies
+ruby 2.7.2
+Rails 6.0.4.1
+database: Postgresql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+<img width="1440" alt="截圖 2021-09-07 下午2 29 41" src="https://user-images.githubusercontent.com/54057056/132295317-a52c2a64-d387-4879-bafb-05f3e34e5b7c.png">
 
