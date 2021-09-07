@@ -7,7 +7,7 @@ Stimulus
 
 Backend
 
-ruby 2.7.2
+ruby 2.7.2 <br>
 Rails 6.0.4.1  <br>
 database: Postgresql
 
