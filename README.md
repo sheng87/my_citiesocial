@@ -1,11 +1,11 @@
 # README
-Frontnd
+## Frontnd
 
 Bulma Css <br>
 Stimulus
 
 
-Backend
+## Backend
 
 ruby 2.7.2 <br>
 Rails 6.0.4.1  <br>
